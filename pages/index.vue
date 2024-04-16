@@ -32,8 +32,20 @@
         <h1>Blog</h1>
         <div id="blog-list">
 
-          <p>None for now, check back later.</p> 
-
+          <ContentList path="/blog">
+            <template #default="{ list }">
+              <div class="blog-content" v-for="blog in list" :key="blog._path">
+                <NuxtLink :to="blog._path">
+                  <img :src="blog.thumbnail" alt="">
+                  <h3>{{ blog.title }}</h3>
+                  <p>{{ blog.description }}</p>
+                </NuxtLink>
+              </div>
+            </template>
+            <template #not-found>
+              <p>None for now, check back later.</p>
+            </template>
+          </ContentList>
         </div>
       </div>
     </div>
@@ -44,80 +56,6 @@
   </div>
 </template>
 
-<style>
-:root {
-  --text-color: #e8e8e8;
-  --background-color: #0e0a19;
-  --primary-color: #a58bde;
-  --secondary-color: #3c1a85;
-  --accent-color: #5c1fe3;
-}
-
-html {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: sans-serif;
-}
-
-ul {
-  list-style-type: none;
-}
-
-#page {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  height: 100vh;
-}
-
-#info-wrapper {
-  margin: 15px;
-  padding-left: 20px;
-  background-color: var(--secondary-color);
-  box-shadow: -5px 5px var(--accent-color);
-  border-radius: 10px;
-  height: max-content;
-  width: 80%;
-}
-
-#main {
-  grid-column: span 2 / span 2;
-}
-
-#projects-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.project-content {
-  background-color: var(--primary-color);
-  margin-left: -30px;
-  margin-bottom: 40px;
-  width: 90%;
-  height: 90%;
-  padding-left: 20px;
-  box-shadow: 5px 5px var(--accent-color);
-  border-radius: 5px;
-}
-
-.project-content:hover {
-  transform: scale(1.01);
-}
-
-.project-content a {
-  color: var(--text-color);
-}
-
-#footer {
-  position: sticky;
-  bottom: 0;
-}
-
-#footer p {
-  position: absolute;
-  bottom: 0;
-}
-
-#footer p a {
-  color: var(--text-color);
-}
+<style lang="scss">
+@use "~/assets/css/index.scss";
 </style>

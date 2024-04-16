@@ -1,0 +1,33 @@
+main {
+  width: 70%;
+  margin: 30px auto;
+  padding: 50px 70px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-radius: 10px;
+
+  img {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+  }
+
+  pre {
+    background-color: #d3d3d3;
+    width: max-content;
+    padding: 20px 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  a {
+    color: black;
+  }
+}
