@@ -24,11 +24,6 @@
             <p>My personal portfolio website.</p>
             <a href="https://github.com/indie-breath/portfolio-website">https://github.com/indie-breath/portfolio-website</a>
           </div>
-          <div class="project-content">
-            <h3>Portfolio Website</h3>
-            <p>My personal portfolio website.</p>
-            <a href="https://github.com/indie-breath/portfolio-website">https://github.com/indie-breath/portfolio-website</a>
-          </div>
 
         </div>
       </div>
