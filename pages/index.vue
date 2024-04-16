@@ -32,16 +32,20 @@
         <h1>Blog</h1>
         <div id="blog-list">
 
-          <ContentList path="/blog" v-slot="{ list }">
-            <div class="blog-content" v-for="blog in list" :key="blog._path">
-              <NuxtLink :to="blog._path">
-                <img :src="blog.thumbnail" alt="">
-                <h3>{{ blog.title }}</h3>
-                <p>{{ blog.description }}</p>
-              </NuxtLink>
-            </div>
+          <ContentList path="/blog">
+            <template #default="{ list }">
+              <div class="blog-content" v-for="blog in list" :key="blog._path">
+                <NuxtLink :to="blog._path">
+                  <img :src="blog.thumbnail" alt="">
+                  <h3>{{ blog.title }}</h3>
+                  <p>{{ blog.description }}</p>
+                </NuxtLink>
+              </div>
+            </template>
+            <template #not-found>
+              <p>None for now, check back later.</p>
+            </template>
           </ContentList>
-
         </div>
       </div>
     </div>
