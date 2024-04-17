@@ -3,7 +3,6 @@
     <div id="info-wrapper">
       <img src="" alt="" />
       <h1>indiebreath</h1>
-      <p>Melbourne, Australia</p>
       <ul id="media-links">
         <li><a href="https://github.com/indie-breath"><img src="/github.svg" alt="" width="35px" /></a></li>
       </ul>
