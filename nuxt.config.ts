@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   vite: {
     build: {
       cssCodeSplit: true,
-    }
+    },
+    base: "https://indie-breath.github.io/portfolio-website/",
   },
 })
