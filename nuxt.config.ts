@@ -8,6 +8,6 @@ export default defineNuxtConfig({
     build: {
       cssCodeSplit: true,
     },
-    base: "https://indie-breath.github.io/portfolio-website/",
+    base: "/portfolio-website/",
   },
 })
