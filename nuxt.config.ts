@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: ["@nuxt/content", "@nuxt/image"],
+  modules: ["@nuxt/content", "@nuxt/image", "nuxt-vercel-analytics"],
   vite: {
     build: {
       cssCodeSplit: true,
